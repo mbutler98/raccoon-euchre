@@ -1,0 +1,58 @@
+<div id="backdrop" aria-hidden="true"></div>
+<div id="flash" aria-hidden="true"></div>
+
+<div id="app">
+  <!-- HOME: the alley crew scene is the menu -->
+  <section id="home" class="screen">
+    <h1 class="logo" aria-label="Trash Night Euchre"><span class="l0">Trash Night</span><span class="l1">EUCHRE</span></h1>
+    <div class="grow"></div>
+    <div class="homemenu">
+      <button class="note tablenote" id="tableNote"><small>Tonight's table</small><b id="tableName"></b><span class="faces" id="tableFaces"></span><i class="chev">›</i></button>
+      <button class="btn b-gold big" id="dealBtn" style="--r:-1.5deg">Deal me in</button>
+      <div class="arow">
+        <button class="btn b-teal hasbadge" id="deckBtn" style="--r:1deg">My deck<span class="badge" id="deckBadge" hidden>new</span></button>
+        <button class="btn b-plain" id="rulesBtn" style="--r:-1deg">How to play</button>
+        <button class="btn b-plain sq" id="gearBtn" style="--r:2deg" aria-label="Settings">⚙</button>
+      </div>
+      <div class="homestats" id="homeStats"></div>
+    </div>
+  </section>
+
+  <!-- SUB SCREEN: tables / deck -->
+  <section id="sub" class="screen" hidden>
+    <header class="subhead"><button class="btn b-plain small" id="subBack" style="--r:-2deg">‹ Back</button><h2 id="subTitle"></h2></header>
+    <div class="subbody" id="subBody"></div>
+  </section>
+
+  <!-- GAME -->
+  <section id="game" class="screen" hidden>
+    <div class="topbar">
+      <div class="score">
+        <div class="team us" style="--r:-2deg"><b>Us</b><span class="pts" id="scoreUs">0</span><span class="bar" id="barUs"></span></div>
+        <div class="team them" style="--r:1.5deg"><b>Them</b><span class="pts" id="scoreThem">0</span><span class="bar" id="barThem"></span></div>
+      </div>
+      <div class="trumpchip" id="trumpChip" hidden></div>
+      <button class="btn b-plain small" id="menuBtn" style="--r:2deg">Menu</button>
+    </div>
+    <div id="table">
+      <div id="felt"><span class="stamp">THIS SIDE UP ↑</span><i class="tape t1"></i><i class="tape t2"></i></div>
+      <div class="seat s2" data-s="2"></div>
+      <div class="seat s1" data-s="1"></div>
+      <div class="seat s3" data-s="3"></div>
+      <div class="seat s0" data-s="0"></div>
+      <div id="trick">
+        <div class="tslot" data-s="2"></div><div class="tslot" data-s="1"></div>
+        <div class="tslot" data-s="3"></div><div class="tslot" data-s="0"></div>
+      </div>
+      <div id="kitty" hidden><div class="kdeck"></div><div class="kup"></div></div>
+      <div id="status" aria-live="polite"></div>
+      <div id="banner" hidden></div>
+    </div>
+    <div id="hand"></div>
+    <div id="actions"></div>
+  </section>
+</div>
+
+<div id="fx"></div>
+<div id="scrim" hidden></div>
+<div id="modal" role="dialog" aria-modal="true" hidden></div>
